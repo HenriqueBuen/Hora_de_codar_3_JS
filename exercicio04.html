@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100 (inclusive).
+        
+      
+        
+    const numeros = []
+    while(true) {
+        let valor = parseInt(prompt("Informe um número. Obs: para terminar o processo e calcular a média digite: 1"))
+        if(valor === 1) {
+            let total = 0
+            for(let number of numeros) {
+                total += number
+            }
+
+            alert(`A média é ${total / numeros.length}`)
+            break;
+        }
+
+        if(valor >= 15 && valor <= 100) numeros.push(valor)
+        else alert("Esté número não será contabilizado")
+    }
+
+
+
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final. Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?" e solicitar um resposta. Se a resposta for "S", o programa deve ser executado novamente, caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.
+
+        
+        
+    const alunos = {
+        aprovados: 0,
+        reprovados: 0,
+    } 
+
+    const CalcularMediaAluno = () => {
+        const p_numero = parseFloat(prompt("Qual é a primeira nota?"))
+        const s_numero = parseFloat(prompt("Qual é a segunda nota?"))
+        const media = (p_numero + s_numero) / 2
+
+        let resposta
+
+        if(media > 9.5) {
+            alunos.aprovados++
+            alert(`O aluno foi aprovado [ ${media} ]`)
+            resposta = prompt("Calcular a média de outro aluno Sim/Não?")
+        } else {
+            alunos.reprovados++
+            alert(`O aluno foi reprovado [ ${media} ]`)
+            resposta = prompt("Calcular a média de outro aluno Sim/Não?")
+        }
+
+        if(resposta.toLowerCase() == "sim" || resposta.toLowerCase() == "s") CalcularMediaAluno()
+        else {
+            alert(`${alunos.aprovados} foram aprovados e ${alunos.reprovados} foram reprovados, total: ${alunos.aprovados + alunos.reprovados}`)
+        }
+    }
+    
+    CalcularMediaAluno()
+
+
+
+    
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
